@@ -1,0 +1,8 @@
+artifacts: artifacts/500
+dataset:
+  dt_length: 100000
+  t: 500
+train:
+  batch: 64
+  epochs: 100
+  es_patience: 10

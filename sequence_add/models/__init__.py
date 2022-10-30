@@ -1,0 +1,1 @@
+from .sequencial import create_model
