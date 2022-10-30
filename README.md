@@ -69,9 +69,16 @@ a pred.pkl file.
 
 The model was used on sequences of T = 150,200,250,300,500,700 and 1000. The 
 dataset length was 100,000 sequences on all cases. Below we show the Training/Validation
-Loss against the epoch for each experiment. Since the validation loss keeps on 
-decreasing along with the training loss we can conclude that the model does not 
-overfit. 
+Loss against the epoch for each experiment. From these we draw the following conclusions:
+
+1. For T less than 700 the validation loss decreases along with the training loss. 
+Hence the model does not overfit.
+2. For T = 1000 the model fails to decrease its validation loss, meaning that it 
+cannot complete its objective and it terminates due to early stopping on its 
+17th epoch.
+3. As T increases the convergence speed of the model also increases prooving 
+that the task becomes more difficult. This is in agrrement both with the author 
+of the original paper and our intuition.
 
 ### Experiment on T = 150
 
@@ -101,11 +108,9 @@ overfit.
 
 ![image](artifacts/1000/loss.png)
 
+### Comparison of best loss for each experiment
 
-Moreover, if we compare the validation loss across all seven experiments we 
-draw the following conclusion:  
+![image](loss_vs_t.png)
 
-As the sequence length T increases the performance of the model degrades either 
-in convergence speed or validation loss. This is in agreement both with the 
-author of the original paper and our intuition.
+
 
