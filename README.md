@@ -22,9 +22,8 @@ pip install -r requirements.txt
 
 However, this was created using a Macbook M1 so a special version of Tensorflow 
 was used to support that. If you are not using a similar hardware please delete 
-all lines from requirements.txt that contain a tensorflow package and install 
+all lines from the requirements.txt that contain a tensorflow package and install 
 tensorflow using
-normal tensorflow using
 ```
 pip install tensorflow
 ```
@@ -67,9 +66,10 @@ a pred.pkl file.
 
 ## Results
 
-The model was used on sequences of T = 150,200,250,300,500,700 and 1000. The 
+The model was trained on sequences of T = 150,200,250,300,500,700 and 1000. The 
 dataset length was 100,000 sequences on all cases. Below we show the Training/Validation
-Loss against the epoch for each experiment. From these we draw the following conclusions:
+Loss against the epoch for each experiment. Moreover we compare the best 
+validation loss for each experiment. From these we draw the following conclusions:
 
 1. For T less than 700 the validation loss decreases along with the training loss. 
 Hence the model does not overfit.
